@@ -1,0 +1,13 @@
+{:deps true
+ :builds {:app {:target :browser
+                :output-dir "resources/public/cljs"
+                :asset-path "/cljs"
+                :release {:output-dir "resources/public/cljs"
+                          :module-hash-names 12
+                          :build-options {:manifest-name "assets.edn"}}
+                ;; :module-loader true
+                :modules {:react-shared-deps {:entries [foobar.front.react-shared-deps]}
+                          :page-1 {:init-fn foobar.front.page-1/main!
+                                   :depends-on #{:react-shared-deps}}
+                          :page-2 {:init-fn foobar.front.page-2/main!
+                                   :depends-on #{:react-shared-deps}}}}}}

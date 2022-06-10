@@ -1,0 +1,11 @@
+{
+  "name": "foobar",
+  "version": "1.0.0",
+  "author": "Damien Ragoucy <dam@ramdam.io>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
