@@ -1,0 +1,16 @@
+{
+  "calva.replConnectSequences": [
+    {
+      "name": "My server and shadow cljs",
+      "projectType": "deps.edn",
+      "cljsType": {
+        "dependsOn": "shadow-cljs",
+        "startCode": "(user/start)",
+        "isReadyToStartRegExp": "Clip DEV system started",
+        "connectCode": "(user/cljs-repl)",
+        "isConnectedRegExp": "To quit, type: :cljs/quit",
+        "buildsRequired": true
+      }
+    }
+  ]
+}
