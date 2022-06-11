@@ -1,7 +1,6 @@
 (ns foobar.server.webserver
   (:require [foobar.server.routes :as r]
-            [ring.adapter.jetty :as jetty]
-            [clojure.spec.alpha :as s]))
+            [ring.adapter.jetty :as jetty]))
 
 (defn start-webserver! [options]
   (-> (r/make-ring-reitit-router)

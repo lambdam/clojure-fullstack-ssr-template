@@ -1,8 +1,9 @@
 (ns foobar.server.handlers.public
   (:require [foobar.server.layouts :as layouts]
-            [foobar.shared.views.page-1 :as sv-page-1]
             [foobar.server.lib.cljs-builds :as cljs-builds]
-            [foobar.server.routing :as r]))
+            [foobar.server.routing :as r]
+            [foobar.shared.views.page-1 :as sv-page-1]
+            [foobar.shared.views.page-2 :as sv-page-2]))
 
 (defn home-page [req]
   (layouts/render-public-layout
@@ -28,6 +29,6 @@
 (defn webapp-page-2 [req]
   (layouts/render-public-layout
     (assoc req ::layouts/extra-js-deps [(cljs-builds/inject-cljs-resource :react-shared-deps)
-                                        (cljs-builds/inject-cljs-resource :page-1)])
+                                        (cljs-builds/inject-cljs-resource :page-2)])
     [:div#react-root
-     [sv-page-1/root {}]]))
+     [sv-page-2/root {}]]))
