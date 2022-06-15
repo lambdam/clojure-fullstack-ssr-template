@@ -1,4 +1,6 @@
-{:deps true
+{:deps ;true
+ ;; The aliases bring in what we need in development (including shadow-cljs)
+ {:aliases [:dev :cljs]}
  :builds {:app {:target :browser
                 :output-dir "resources/public/cljs"
                 :asset-path "/cljs"
