@@ -1,16 +1,38 @@
 {
   "calva.replConnectSequences": [
     {
-      "name": "My server and shadow cljs",
+      // REPL started like so:
+      // clojure -Sdeps '{:deps {nrepl/nrepl {:mvn/version,"0.9.0"},cider/cider-nrepl {:mvn/version,"0.27.4"}}}' -M:dev:cljs -m nrepl.cmdline --middleware "[cider.nrepl/cider-middleware,shadow.cljs.devtools.server.nrepl/middleware]"
+      "name": "Connect to server + client started with clojure",
       "projectType": "deps.edn",
+      "afterCLJReplJackInCode": "(user/start)",
+      "menuSelections": {
+        "cljAliases": [
+          "dev",
+          "cljs"
+        ],
+        "cljsLaunchBuilds": [
+          "app"
+        ]
+      },
       "cljsType": {
         "dependsOn": "shadow-cljs",
-        "startCode": "(user/start)",
         "isReadyToStartRegExp": "Clip DEV system started",
         "connectCode": "(user/cljs-repl)",
         "isConnectedRegExp": "To quit, type: :cljs/quit",
-        "buildsRequired": true
-      }
+        "buildsRequired": true,
+      },
+    },
+    {
+      "name": "Jack-in to server + client started with shadow-cljs",
+      "projectType": "shadow-cljs",
+      "afterCLJReplJackInCode": "(user/start)",
+      "menuSelections": {
+        "cljsLaunchBuilds": [
+          "app"
+        ],
+      },
+      "cljsType": "shadow-cljs",
     }
   ]
 }
