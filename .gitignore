@@ -19,3 +19,6 @@
 # Project
 /resources/public/cljs/
 /resources/public/bootstrap*
+
+# Node
+node_modules/
