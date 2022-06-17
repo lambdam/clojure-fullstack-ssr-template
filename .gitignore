@@ -15,6 +15,7 @@
 /.clj-kondo
 /.lsp
 /.shadow-cljs
+/.joyride/.nrepl-port
 
 # Project
 /resources/public/cljs/
