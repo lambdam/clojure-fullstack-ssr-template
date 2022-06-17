@@ -32,3 +32,16 @@
    (shadow-server/start!)
    (shadow/watch build-id)
    (shadow/nrepl-select build-id)))
+
+(defn refresh-and-restart []
+  (stop)
+  (tools-repl/refresh :after 'user/start))
+
+(comment
+
+  (start)
+  (stop)
+
+  (refresh-and-restart)
+
+  )

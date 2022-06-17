@@ -47,6 +47,9 @@ The system will start.
 
 Open the frontend at http://localhost:4567
 
+You can refresh and reload the system by running the project custom command: `Calva: Run Custom REPL Command`
+followed by `Refresh and restart Clojure project`.
+
 ### Joyride convenience included
 
 If you have the [Joyride](https://github.com/BetterThanTomorrow/joyride) VS Code extension installed, you can benefit from the Joyride scripts and functions included in this project.

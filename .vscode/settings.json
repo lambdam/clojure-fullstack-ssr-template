@@ -34,5 +34,13 @@
       },
       "cljsType": "shadow-cljs",
     }
-  ]
+  ],
+  "calva.customREPLCommandSnippets": [
+    {
+        "name": "Refresh and restart Clojure project",
+        "key": "r",
+        "repl": "clj",
+        "snippet": "(user/refresh-and-restart)"
+    }
+]
 }
