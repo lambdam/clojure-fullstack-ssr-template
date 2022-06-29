@@ -2,8 +2,7 @@
   (:require ["vscode" :as vscode]
             ["ext://betterthantomorrow.calva$v0" :as calva]
             [joyride.core :as joyride]
-            [promesa.core :as p]
-            [z-joylib.editor-utils :as editor-utils]))
+            [promesa.core :as p]))
 
 (def oc (joyride.core/output-channel))
 
@@ -25,11 +24,6 @@
   "Evaluates `code` in whatever the current session is."
   [code]
   (evaluate-in-session+ (calva/repl.currentSessionKey) code))
-
-(defn evaluate-selection+ []
-  (p/let [code (editor-utils/current-selection-text)
-          result (.-result (evaluate+ code))]
-    result))
 
 ;; Utils for REPL-ing Joyride code, when connected to a project REPL.
 
